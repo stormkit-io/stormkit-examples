@@ -2,7 +2,7 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import App from "./App.js";
 
-export default (req, res) => {
+export default async (req, res) => {
   // We don't need bots indexing this page
   if (req.path === "/robots.txt") {
     return res.send({
@@ -17,7 +17,7 @@ export default (req, res) => {
   return res.send({
     headers: {
       "X-Powered-By": "stormkit.io",
-      "X-My-Custom-Header": Date.now()
+      "X-My-Custom-Header": Date.now().toString()
     },
     body: { content: renderToString(<App />) },
     status: 200

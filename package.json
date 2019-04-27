@@ -5,11 +5,11 @@
   "main": "index.js",
   "private": true,
   "workspaces": [
-    "create-react-app"
+    "examples/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:create-react-app": "cd create-react-app && yarn && yarn build"
+    "build:create-react-app": "cd examples/create-react-app && yarn build"
   },
   "repository": {
     "type": "git",
