@@ -15,7 +15,7 @@ In order to host this example on Stormkit:
 
 1. Create an application by connecting this repository
 1. Create an environment for each folder
-1. Specify the build configuration
-1. Create an extra environment variable on the config page called `SK_CWD` with the folder name being the value
-
-The `SK_CWD` environment variable tells Stormkit to change the working directory. The build command will be executed directly within that directory.
+1. Go to **Environment** > **Config** > **General** 
+1. Configure the `branch`. It should point to `main`.
+1. Go to **Environment** > **Config** > **Build**
+2. Configure the `root directory`. It should point to the subfolder of the example.
