@@ -49,16 +49,14 @@ export function app(): express.Express {
 
 const server = app();
 
+// Export for Stormkit serverless
 export const handler = serverless(server);
 
-function run(): void {
+// Run a server for non Stormkit environments
+if (process.env['STORMKIT'] !== 'true') {
   const port = process.env['PORT'] || 4000;
 
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
-}
-
-if (process.env['STORMKIT'] !== 'true') {
-  run();
 }
