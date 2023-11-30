@@ -8,7 +8,8 @@ This repository contains example applications that can be hosted on [Stormkit](h
 | next-js          | prerendered | [https://examples--next.stormkit.dev/](https://examples--next.stormkit.dev/) |
 | nuxt             | serverless  | [https://examples--nuxt.stormkit.dev/](https://examples--nuxt.stormkit.dev/) |
 | static           | static      | [https://examples--static.stormkit.dev/](https://examples--static.stormkit.dev/) |
-| angular         | universal  | [https://examples--ng-universal.stormkit.dev/](https://examples--angular.stormkit.dev/) |
+| angular         | universal  | [https://examples--angular.stormkit.dev/](https://examples--angular.stormkit.dev/) |
+| express-js      | serverless  | [https://examples--express.stormkit.dev/](https://examples--express.stormkit.dev/) |
 
 ## Application Structure
 
