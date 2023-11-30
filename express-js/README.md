@@ -11,12 +11,21 @@ npx express-generator
 
 There are two possible ways to deploy a Serverless Express.js application on [Stormkit](https://www.stormkit.io).
 
-## 1. Quick way
+### 1. Quick way
 
-1. Create a [server.js](./server.js) file on the root level of the project.
-2. Export a function named `handler`. 
-3. Wrap the Express app using `@stormkit/serverless` package.
-4. Hit the deploy button. 
+1. Create a [server.js](./server.js) file on the root level of the project that exports the Express app wrapped with `@stormkit/serverless` helper.
+2. Hit the deploy button. 
+
+Example:
+
+```js
+const serverless = require("@stormkit/serverless");
+const app = require("./app.js");
+
+module.exports = {
+  handler: serverless(app),
+};
+```
 
 This method will upload anything, including the `node_modules`, to the Lambda function and will
 configure the entry point as `server.js:handler`. 
@@ -24,9 +33,9 @@ configure the entry point as `server.js:handler`.
 It works out of the box however note that the more dependencies your project use, the bigger will be your 
 deployment package. We have a `250MB` limit on the zipped folder. 
 
-## 2. Advanced 
+### 2. Advanced 
 
-1. Follow the first three steps mentioned above. 
+1. Follow the first step mentioned above. 
 2. Use a bundler like Webpack, Vite or Rollup to build and bundle your application. 
 3. Set the build folder as follows: `.stormkit/server` 
 4. Make sure the `server.js` file is also located in the `.stormkit/server` subfolder. 
