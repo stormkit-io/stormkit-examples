@@ -42,11 +42,7 @@ func StartServer() {
 		}).Methods("GET", "HEAD")
 
 	// This is important, as Stormkit assigns the port dynamically
-	port := os.Getenv("PORT")
-
-	if port == "" {
-		port = "8080"
-	}
+	port := GetString(os.Getenv("PORT"), "8080")
 
 	log.Printf("Server starting on :%s\n", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), r))

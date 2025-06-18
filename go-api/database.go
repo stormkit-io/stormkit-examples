@@ -48,10 +48,10 @@ func Connection() (*Database, error) {
 
 	cachedDB = &Database{
 		Connection: nil,
-		host:       os.Getenv("POSTGRES_HOST"),
-		port:       os.Getenv("POSTGRES_PORT"),
-		sslmode:    os.Getenv("POSTGRES_SSL"),
-		schema:     os.Getenv("POSTGRES_SCHEMA"),
+		host:       GetString(os.Getenv("POSTGRES_HOST"), "localhost"),
+		port:       GetString(os.Getenv("POSTGRES_PORT"), "5432"),
+		sslmode:    GetString(os.Getenv("POSTGRES_SSL"), "disable"),
+		schema:     GetString(os.Getenv("POSTGRES_SCHEMA"), "public"),
 		user:       os.Getenv("POSTGRES_USER"),
 		password:   os.Getenv("POSTGRES_PASSWORD"),
 		dbname:     os.Getenv("POSTGRES_DB"),
@@ -84,4 +84,15 @@ func (d *Database) Close() {
 	if err := d.Connection.Close(); err != nil {
 		log.Printf("failed to close database connection: %v", err)
 	}
+}
+
+// GetString returns the first non-empty string.
+func GetString(s ...string) string {
+	for _, str := range s {
+		if str != "" {
+			return str
+		}
+	}
+
+	return ""
 }
