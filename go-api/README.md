@@ -7,7 +7,7 @@ This repository contains a simple "Hello, World!" application written in Go.
 1. Login to your self-hosted Stormkit Instance. Here's [a guide](https://www.stormkit.io/tutorials/how-to-self-host-stormkit-on-hetzner-cloud) to set it up.
 2. Import this project from URL
 3. Configure the Build Settings:
-   - Build command: `go build -o dist/server server.go`
+   - Build command: `go build -o dist/server .`
    - Build root: `./go-api`
    - Output folder: `./dist`
 4. Configure the Server Settings:
