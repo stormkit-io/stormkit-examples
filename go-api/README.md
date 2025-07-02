@@ -8,6 +8,7 @@ This repository contains a simple "Hello, World!" application written in Go.
 2. Import this project from URL
 3. Configure the Build Settings:
    - Build command: `go build -o dist/server server.go`
+   - Build root: `./go-api`
    - Output folder: `./dist`
 4. Configure the Server Settings:
    - Start command: `./dist/server.go`
