@@ -75,6 +75,8 @@ func Connection() (*Database, error) {
 		return nil, err
 	}
 
+	fmt.Println("connected to database")
+
 	cachedDB.Connection = db
 
 	return cachedDB, nil
