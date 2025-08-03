@@ -1,6 +1,6 @@
 # Next.js Starter Example
 
-This repository contains a simple "Hello, World!" application written in Go.
+This is a simple Next.js Starter project.
 
 ## ⚡️ Deployment with Stormkit
 
