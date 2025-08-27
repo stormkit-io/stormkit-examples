@@ -11,7 +11,7 @@ This is a simple Angular Starter project.
    - Build root: `./angular`
    - Output folder: `./dist/angular`
 4. Configure the server settings:
-   - Start command: `npm run npm run serve:ssr:angular`
+   - Start command: `npm run serve:ssr:angular`
 5. Click Save and Deploy
 
 - 🛠️ [Set up Stormkit on Hetzner](https://www.stormkit.io/tutorials/how-to-self-host-stormkit-on-hetzner-cloud)
