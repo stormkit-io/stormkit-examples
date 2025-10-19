@@ -1,20 +1,12 @@
 node_modules
-package-lock.json
-yarn.lock
-
 .DS_Store
-.cache
+dist
+dist-ssr
+*.local
+count.txt
 .env
-.vercel
-.output
 .nitro
-/build/
-/api/
-/server/build
-/public/build# Sentry Config File
-.env.sentry-build-plugin
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
 .tanstack
+.output
+.vinxi
+todos.json
